@@ -9,7 +9,7 @@ bot.on('ready', () => {
 });
 
 function doMagic8BallVoodoo() {
-    var rand = ['zphoebus@hotmail.com:phreak9969', 'nealmu@gmail.com:raya99', 'red.double.blade@gmail.com:pizzaman123', 'joshua.alan.baker@gmail.com:theone', 'swoog@ymail.com:sonicheroes12', 'earthyelves@gmail.com:tambo3', 'swoog@ymail.com:sonicheroes12', '', '', '', '', '', '', '', '', '', ''];
+    var rand = ['zphoebus@hotmail.com:phreak9969', 'nealmu@gmail.com:raya99', 'red.double.blade@gmail.com:pizzaman123', 'joshua.alan.baker@gmail.com:theone', 'swoog@ymail.com:sonicheroes12', 'earthyelves@gmail.com:tambo3', 'swoog@ymail.com:sonicheroes12'];
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
@@ -29,7 +29,7 @@ bot.on('message', msg => {
 
   let args = msg.content.split(" ").slice(1);
 
-  if (command === "calculateadd") {
+  if (command === "") {
     let numArray = args.map(n=> parseInt(n));
     let total = numArray.reduce( (p, c) => p+c);
 
@@ -45,7 +45,8 @@ bot.on('message', msg => {
     msg.reply(msg.author.avatarURL);
   }
 
-  if (command === "8ball") {
+  if (command === "generate") {
+     msg.reply("**Generating...**")
     msg.author.sendMessage(doMagic8BallVoodoo())
   }
 
@@ -54,7 +55,7 @@ bot.on('message', msg => {
     msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=434814153107177484&scope=bot&permissions=66137103")
   }
 
-  if (command === "cointoss") {
+  if (command === "") {
     msg.channel.sendMessage(coinToss())
   }
 
