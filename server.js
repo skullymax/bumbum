@@ -1,16 +1,12 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 
-// 'client.on('message')' commands are triggered when the
-// specified message is read in a text channel that the bot is in.
+const config = require("./config.json")
 
-var help = new Discord.RichEmbed().setTitle("_+-=^EyzAlts^=-+_").setDescription(`**Server Prefix:** \n\n**Fun Commands :**\nyoutube-roulette.\n\n**Useful Commands :**\nadd, subtract, multiply, divide, factorial, sqrt, random, exponent, pythagorean, addvideo, say, repeat, level, prefix, invite, and ping.\n\n**Moderation Commands :** lockdown, warn, mute, purge, ban, kick, unban.`).setColor("#00fff6").setThumbnail("https://cdn.discordapp.com/attachments/313339485725130752/318545971187417091/ayy.png").setFooter("Version 0.0.1 | By LittleWhole").setTimestamp();
-client.login(BotID);
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.username}!`);
-    client.user.setGame(`/help | By skullymax`)
-    client.user.setStatus('online');
-   });
+bot.on('ready', () => {
+  bot.user.setGame('c:help for commands');
+  console.log(`Kitilen initilized.`);
+});
 
 function doMagic8BallVoodoo() {
     var rand = [':8ball: Absolutly.', ':8ball: Absolutly not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
@@ -18,39 +14,75 @@ function doMagic8BallVoodoo() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 
-var preview = "**Free Alt** ashar.wallace.word@gmail.com:66ry46"
-
-client.on('message', message => {
-  if (message.content === '/free') {
-      message.author.sendMessage(preview);
+function coinToss() {
+    var rand = ['You flipped the coin, it lands on tails.', 'I flipped the coin, it lands on tails.', 'You flipped the coin, it lands on heads.', 'I flipped the coin, it lands on heads.'];
+    return rand[Math.floor(Math.random()*rand.length)];
 }
-});
 
-var RoleID = ''
-var RoleText = "Use key /use {secretkey}"
-var BotID = "NDM0ODE0MTUzMTA3MTc3NDg0.DbTz-g.T70Ug3NPY6sLXKVscIMlV6kVIgc"
+bot.on('message', msg => {
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(config.prefix)) return;
 
-client.on('message', message => {
-  if (message.content === '/use') {
+  let command = msg.content.split(" ")[0];
+  command = command.slice(config.prefix.length);
+  console.log(command);
+
+  let args = msg.content.split(" ").slice(1);
+
+  if (command === "calculateadd") {
+    let numArray = args.map(n=> parseInt(n));
+    let total = numArray.reduce( (p, c) => p+c);
+
+    msg.channel.sendMessage(total).catch(console.error);
+  }
+
+  if (command === "say") {
+     msg.delete();
+     msg.channel.sendMessage(args.join(" "));
+  }
+
+  if (command === "ping") {
+    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit(`Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
+  }
+
+  if (command === "pong") {
+     msg.channel.send("Ping! (hold on, processing latency...)").then(m => m.edit(`Ping! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
+
+  }
+  if (command === "help") {
+    msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
+    msg.author.sendMessage("Thanks for using the help command, this command will help you know the current commands. c:ping and c:pong are commands used to check if the bot is online. c:say allows you to make the bot say whatever you want it to say. c:calculateadd is an adding calculator. c:8ball is a fun command where you can ask the magic 8 ball a question and it will reply. c:invite makes the bot DM you an invite link to invite the bot to your server. And c:objection, c:holdit and c:takethat are AA commands.")
+  }
+
+  if (command === "objection") {
+    msg.channel.sendMessage(`http://i.imgur.com/19WEQFO.gif ${args.join(" ")}`);
+  }
+
+  if (command === "holdit") {
+    msg.channel.sendMessage(`http://i.imgur.com/6kg9dtc.png ${args.join(" ")}`);
+  }
+
+  if (command === "takethat") {
+    msg.channel.sendMessage(`http://i.imgur.com/S45Dsnb.png ${args.join(" ")}`);
+  }
+
+  if (command === "avatar") {
+    msg.reply(msg.author.avatarURL);
+  }
+
+  if (command === "8ball") {
     msg.channel.sendMessage(doMagic8BallVoodoo())
+  }
 
-}
+  if (command === "invite") {
+    msg.reply("It seems you want to invite me to your server. Check your DMs. ")
+    msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=269968242984878081&scope=bot&permissions=305212430")
+  }
+
+  if (command === "cointoss") {
+    msg.channel.sendMessage(coinToss())
+  }
+
 });
 
-var help = "**Commands: `/help /free `More Commands soon.**"
-
-client.on('message', message => {
-  if (message.content === '/help') {
-      message.channel.sendMessage(help);
-}
-});
-
-var info = "Buy key from here:"
-
-client.on('message', message => {
-  if (message.content === '/useinfo') {
-      message.channel.sendMessage(info);
-}
-});
-
-client.login(BotID);
+bot.login(config.token);
