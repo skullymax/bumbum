@@ -9,7 +9,7 @@ bot.on('ready', () => {
 });
 
 function doMagic8BallVoodoo() {
-    var rand = [':8ball: Absolutly.', ':8ball: Absolutly not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
+    var rand = ['zphoebus@hotmail.com:phreak9969', 'nealmu@gmail.com:raya99', 'red.double.blade@gmail.com:pizzaman123', 'joshua.alan.baker@gmail.com:theone', 'swoog@ymail.com:sonicheroes12', 'earthyelves@gmail.com:tambo3', 'swoog@ymail.com:sonicheroes12', '', '', '', '', '', '', '', '', '', ''];
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
@@ -36,34 +36,9 @@ bot.on('message', msg => {
     msg.channel.sendMessage(total).catch(console.error);
   }
 
-  if (command === "say") {
-     msg.delete();
-     msg.channel.sendMessage(args.join(" "));
-  }
-
-  if (command === "ping") {
-    msg.channel.send("Pong! (hold on, processing latency...)").then(m => m.edit(`Pong! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
-  }
-
-  if (command === "pong") {
-     msg.channel.send("Ping! (hold on, processing latency...)").then(m => m.edit(`Ping! (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
-
-  }
   if (command === "help") {
     msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
     msg.author.sendMessage("Thanks for using the help command, this command will help you know the current commands. c:ping and c:pong are commands used to check if the bot is online. c:say allows you to make the bot say whatever you want it to say. c:calculateadd is an adding calculator. c:8ball is a fun command where you can ask the magic 8 ball a question and it will reply. c:invite makes the bot DM you an invite link to invite the bot to your server. And c:objection, c:holdit and c:takethat are AA commands.")
-  }
-
-  if (command === "objection") {
-    msg.channel.sendMessage(`http://i.imgur.com/19WEQFO.gif ${args.join(" ")}`);
-  }
-
-  if (command === "holdit") {
-    msg.channel.sendMessage(`http://i.imgur.com/6kg9dtc.png ${args.join(" ")}`);
-  }
-
-  if (command === "takethat") {
-    msg.channel.sendMessage(`http://i.imgur.com/S45Dsnb.png ${args.join(" ")}`);
   }
 
   if (command === "avatar") {
@@ -71,12 +46,12 @@ bot.on('message', msg => {
   }
 
   if (command === "8ball") {
-    msg.channel.sendMessage(doMagic8BallVoodoo())
+    msg.author.sendMessage(doMagic8BallVoodoo())
   }
 
   if (command === "invite") {
     msg.reply("It seems you want to invite me to your server. Check your DMs. ")
-    msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=269968242984878081&scope=bot&permissions=305212430")
+    msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=434814153107177484&scope=bot&permissions=66137103")
   }
 
   if (command === "cointoss") {
