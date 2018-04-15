@@ -12,6 +12,12 @@ client.on('ready', () => {
     client.user.setStatus('online');
    });
 
+function doMagic8BallVoodoo() {
+    var rand = [':8ball: Absolutly.', ':8ball: Absolutly not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
+
+    return rand[Math.floor(Math.random()*rand.length)];
+}
+
 var preview = "**Free Alt** ashar.wallace.word@gmail.com:66ry46"
 
 client.on('message', message => {
@@ -26,12 +32,7 @@ var BotID = "NDM0ODE0MTUzMTA3MTc3NDg0.DbTz-g.T70Ug3NPY6sLXKVscIMlV6kVIgc"
 
 client.on('message', message => {
   if (message.content === '/use') {
-    message.member.addRole(RoleID)
-  .then(console.log)
-  .catch(console.error);
-    message.reply(RoleText)
-    message.member.removeRole('')
-    message.member.addRole('Starter')
+    msg.channel.sendMessage(doMagic8BallVoodoo())
 
 }
 });
