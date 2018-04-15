@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 const config = require("./config.json")
 
 bot.on('ready', () => {
-  bot.user.setGame('c:help for commands');
+  bot.user.setGame('/help | By skullymax');
   console.log(`Kitilen initilized.`);
 });
 
@@ -38,7 +38,7 @@ bot.on('message', msg => {
 
   if (command === "help") {
     msg.channel.sendMessage(":calling: It seems you have requested help. Check your DMs.");
-    msg.author.sendMessage("Thanks for using the help command, this command will help you know the current commands. c:ping and c:pong are commands used to check if the bot is online. c:say allows you to make the bot say whatever you want it to say. c:calculateadd is an adding calculator. c:8ball is a fun command where you can ask the magic 8 ball a question and it will reply. c:invite makes the bot DM you an invite link to invite the bot to your server. And c:objection, c:holdit and c:takethat are AA commands.")
+    msg.author.sendMessage("**Commands** /invite, /generate, /join")
   }
 
   if (command === "avatar") {
@@ -55,8 +55,8 @@ bot.on('message', msg => {
     msg.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=434814153107177484&scope=bot&permissions=66137103")
   }
 
-  if (command === "") {
-    msg.channel.sendMessage(coinToss())
+  if (command === "join") {
+    msg.reply("https://discord.gg/jUv95")
   }
 
 });
