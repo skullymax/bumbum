@@ -46,7 +46,7 @@ bot.on('message', msg => {
   }
 
   if (command === "generate") {
-     msg.reply("**Generating...**")
+    msg.reply("**Generating...**")
     msg.author.sendMessage(doMagic8BallVoodoo())
   }
 
