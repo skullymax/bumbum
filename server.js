@@ -55,7 +55,7 @@ bot.on('message', msg => {
     if (msg.author.bot) return;
     if (!msg.content.startsWith(config.prefix)) return;
 
-    var args = message.content.substring(config.prefix.length).split(" ");
+    var args = message.content.substring(prefix.length).split(" ");
     
   switch (args[0].toLowerCase()) {
     case "embed":
