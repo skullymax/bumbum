@@ -52,7 +52,7 @@ bot.on('message', msg => {
   
   }
        
-  if (command === "embed") {     
+  case "embed":   
     var embed = new Discord.RichEmbed()
     .addField("Donate via paypal", "Soon", true)
     .addField("Join to official discord", "https://discord.gg/fCcXV", true)
