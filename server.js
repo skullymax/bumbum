@@ -57,12 +57,6 @@ bot.on('message', msg => {
 
   if (command === "join") {
     msg.reply("https://discord.gg/jUv95")
-    var embed = new Discord.RichEmbed()
-        .addField("Donate via paypal", "Soon", true)
-        .addField("Join to official discord", "https://discord.gg/fCcXV", true)
-        .setColor(0x00FFFF)
-        .setFooter("Invite this discord bot by using /invite")
-        .setThumbnail(message.author.avatarURL)
   }
 
 });
