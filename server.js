@@ -49,6 +49,28 @@ bot.on('message', msg => {
     msg.reply("**Generating...**")
     msg.author.sendMessage(doMagic8BallVoodoo())
   }
+  
+  }
+  bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (!message.content.startsWith(prefix)) return;
+
+    var args = message.content.substring(prefix.length).split(" ");
+    
+  switch (args[0].toLowerCase()) {
+    case "embed":
+        var embed = new Discord.RichEmbed()
+            .addField("Donate via paypal", "Soon", true)
+            .addField("Join to official discord", "https://discord.gg/fCcXV", true)
+            .setColor(0x00FFFF)
+            .setFooter("Invite this discord bot by using /invite")
+            .setThumbnail(message.author.avatarURL)
+        message.author.sendEmbed(embed);
+        break;
+      default:
+        message.channel.sendMessage("Invalid command");
+  }
 
   if (command === "invite") {
     msg.reply("It seems you want to invite me to your server. Check your DMs. ")
