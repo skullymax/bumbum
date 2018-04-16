@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const PREFIX = "/"
 
 const config = require("./config.json")
 
