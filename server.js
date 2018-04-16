@@ -53,9 +53,8 @@ bot.on('message', msg => {
   }
   bot.on('test', msg => {
     if (msg.author.bot) return;
-
     if (!msg.content.startsWith(config.prefix)) return;
-
+    if (command === "test")
     var args = message.content.substring(config.prefix.length).split(" ");
     
   switch (args[0].toLowerCase()) {
