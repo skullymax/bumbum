@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const PREFIX = "/"
 
 const config = require("./config.json")
 
@@ -54,9 +55,9 @@ bot.on('message', msg => {
   bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(PREFIX)) return;
 
-    var args = message.content.substring(prefix.length).split(" ");
+    var args = message.content.substring(PREFIX.length).split(" ");
     
   switch (args[0].toLowerCase()) {
     case "embed":
