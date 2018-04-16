@@ -51,7 +51,7 @@ bot.on('message', msg => {
   }
   
   }
-  if (command === "test") {
+  bot.on(command === "test") {
     if (msg.author.bot) return;
     if (!msg.content.startsWith(config.prefix)) return;
 
