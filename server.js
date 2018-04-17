@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 const config = require("./config.json")
 
 bot.on('ready', () => {
-  bot.user.setGame('/help | By skullymax');
+  bot.user.setGame('/help or /invite | By skullymax');
   console.log(`Kitilen initilized.`);
 });
 
