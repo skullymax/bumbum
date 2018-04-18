@@ -53,7 +53,7 @@ commands.help.main = function(bot, msg) {
     }
 
 	let embed = {
-		color: ff0000,
+		color: bot.COLOR,
 		description: "Here are a list of commands you can use.",
 		fields: cmds,
 		footer: {
