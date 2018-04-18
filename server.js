@@ -47,7 +47,7 @@ commands.help.main = function(bot, msg) {
 			cmds.push({
 				name: bot.PREFIX + command,
 				value: commands[command].help,
-				inline: false
+				inline: true
 			});
         }
     }
