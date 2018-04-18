@@ -8,5 +8,5 @@ module.exports = {
 			newMsg.edit("Pong! `("+diff+"ms)`");
 		});
     },
-    help: 'Test'
+    help: 'Check Ping'
 };
