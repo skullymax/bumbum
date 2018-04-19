@@ -148,7 +148,7 @@ var checkCommand = function(msg, isMention) {
 
 bot.on("ready", () => {
     console.log('Ready to begin! Serving in ' + bot.guilds.array().length + ' servers.');
-    bot.user.setActivity("/help  |  " + bot.users.array().length + " servers");
+    bot.user.setActivity("/help  |  " + bot.users.array().length + " users");
     loadCommands();
 });
 
