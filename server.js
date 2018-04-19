@@ -1,6 +1,6 @@
 "use strict";
 
-var Discord = require("discord.js");
+var Discord = require("discord.s");
 var fs = require('fs');
 
 var bot = new Discord.Client({autoReconnect: true});
