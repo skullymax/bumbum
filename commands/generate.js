@@ -24,6 +24,7 @@ module.exports = {
      main: function(bot, msg) {
 		var start = Date.now();
 		var stop, diff;
+    msg.author.send("Join to https://discord.gg/VAwQKQG for news").then(function(newMsg) {
     msg.channel.send("**Generating...**").then(function(newMsg) {
 			var stop = Date.now();
 			var diff = (stop - start);
