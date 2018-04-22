@@ -4,7 +4,6 @@ function doMagic8BallVoodoo() {
     'Christophfaenger@gmx.de:sinus314',
     'hetriett@hotmail.com:byron1824',
     'mattday83@gmail.com:dmbrocks',
-    'cdy932@live.com.au:codeman10',
     'azekahh2@yahoo.com:LolSheep223',
     'mikemaushard@gmail.com:shwank11',
     'flz_67_2007@hotmail.com:minis1235',
