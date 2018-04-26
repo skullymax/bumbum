@@ -1,20 +1,20 @@
 function doMagic8BallVoodoo() {
-    var rand = ['dereklthompson@yahoo.com:Dashiell2',
-    'imagination-frustration@hotmail.com:Snorlax12!',
-    'Christophfaenger@gmx.de:sinus314',
-    'hetriett@hotmail.com:byron1824',
-    'mattday83@gmail.com:dmbrocks',
-    'azekahh2@yahoo.com:LolSheep223',
-    'mikemaushard@gmail.com:shwank11',
-    'flz_67_2007@hotmail.com:minis1235',
-    'xnahrutox@gmail.com:cakcis67600!',
-    'dmbuss@gmail.com:t0nsgard',
-    '2000matu@gmail.com:Bionicle123',
-    'amie.napier@gmail.com:Beckett1',
-    'hallucinogenic45@yahoo.com:Bingo369',
-    'dtcook:cookie',
-    'janddjones@bigpond.com:Lachlan1',
-    'pylareaton@gmail.com:p2881911'];
+    var rand = ['mahabh9943@gmail.com:michael04',
+    'finn.hiddenuchiha@gmail.com:mischief',
+    'rohmstark@yahoo.com:Wishwash01',
+    'kay.harrmann@gmx.de:Ball47480',
+    'magloor@gmail.com:capatryk512',
+    'gbisharat95@gmail.com:Azerty95120',
+    'frankalvarez41@yahoo.com:alvarez562',
+    'allesroutine@hotmail.com:knarren12',
+    'beachbomber@yahoo.com:hegsted',
+    'allesroutine@hotmail.com:knarren12',
+    'tumpkin_1@yahoo.com:cardians33',
+    'christofj@arcor.de:anno1927',
+    'mitu0620@gmail.com:mitu2687',
+    'coolcrash360@yahoo.com:snakecjccc5',
+    'bryan_ng_2004@yahoo.com.sg:sampoleh1',
+    'nicolashoffmann0508@gmx.de:auto12345'];
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
