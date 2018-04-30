@@ -1,20 +1,20 @@
 function doMagic8BallVoodoo() {
-    var rand = ['matthambrook35@gmail.com:matthew',
-    'csuf2012@gmail.com:amirah2005',
-    'mattman91@gmail.com:newdivision',
-    'Erop38@mail.ru:28q8628q8628q86',
-    'yontro:darkness',
-    'bluemoon.shadow@gmail.com:datafire384',
-    'mojangsucksdicks@gmail.com:hasapis1',
-    'davaguco:internet73',
-    'tim-soehner@gmx.de:Tiroso19',
-    'kay.harrmann@gmx.de:Ball47480',
-    'kevinlee41300@yahoo.com:kevinlee',
-    'emil@ballersbach.de:2006E05K01',
-    'gianstasi@yahoo.com:clause5',
-    'joshua.alan.baker@gmail.com:theone',
-    'erturkaydin@hotmail.com:cnmbnm003',
-    'inmanthepyro@hotmail.com:loglan123'];
+    var rand = ['jeanlouis.gomes@gmail.com:iverson25',
+    'jonathan.nguyen1233@yahoo.com:009221jon',
+    'iceheartthewarrior@gmail.com:lilpest12',
+    'cainmaxi@mail.com:Droid7717!',
+    'cj-magic@web.de:41324132.',
+    'marcuszenkerrygaard@gmail.com:Marcus1701',
+    'mrspieleplayer@gmail.com:naruto20099',
+    'sarahschoenberg@yahoo.de:Johanna2508',
+    'albion118@gmail.com:tr1f0rc3',
+    'knightaaron16@yahoo.com:knight123',
+    'ahsfreitag94@yahoo.com:Iamthestupid1!',
+    'aukava323@mail.ru:124ata44',
+    'gabriel_gonzalezmendez@hotmail.com:gabriel14121998',
+    'brian722@gmail.com:falcon22',
+    'tormentruler@yahoo.com:dogofevil0',
+    'excsniper@gmail.com:7539518624'];
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
@@ -26,7 +26,7 @@ module.exports = {
     msg.channel.send("**Generating...**").then(function(newMsg) {
 			var stop = Date.now();
 			var diff = (stop - start);
-	    msg.author.send("Join to https://discord.gg/VAwQKQG for news");
+	    msg.author.send("Join to official discord https://discord.gg/VAwQKQG");
 			msg.author.send(doMagic8BallVoodoo());
 		});
     },
