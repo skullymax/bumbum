@@ -1,6 +1,7 @@
-module.exports = {
-     main: function(bot, msg, role) {
-	     const deleteCount = parseInt(args[0], 10);
+  if(command === "clear") {
+    // This command removes all messages from all users in the channel, up to 100.
+
+    const deleteCount = parseInt(args[0], 10);
 
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
       return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
