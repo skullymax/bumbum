@@ -1,20 +1,15 @@
 function doMagic8BallVoodoo() {
-    var rand = ['mephisto162:c3pha89kl',
-    'randomness550:pistola2',
-    'ziggy663@gmail.com:terminator1',
-    'slim.music@hotmail.com:hm7mi15j',
-    'nicolas.sutter68320@orange.fr:DmEmhNyw68',
-    'nickscv:00dd339b',
-    'akshat.jainlive@gmail.com:Winner99',
-    'DaBaconator55@hotmail.com:Cheesewith22',
-    'patrickwalltx@gmail.com:nikefree',
-    'benjamin_ps3@yahoo.com:ps3000',
-    'alastorslain@hotmail.com:cobain',
-    'randomness550:pistola2',
-    'giulianbente@live.de:hamster15',
-    'xombie17@gmail.com:1fast2door',
-    'vcordelia:clochette246',
-    'kyguytorres@hotmail.com:lovemath6'];
+    var rand = ['http://shrinkearn.com/8YT8',
+    'http://shrinkearn.com/dRF4',
+    'http://shrinkearn.com/CZPV',
+    'http://shrinkearn.com/Sts',
+    'http://shrinkearn.com/16iV',
+    'http://shrinkearn.com/Tyx',
+    'http://shrinkearn.com/iMX',
+    'http://shrinkearn.com/4JS',
+    'http://shrinkearn.com/zCQ',
+    'http://shrinkearn.com/rIfA',
+    'http://shrinkearn.com/8HD'];
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
