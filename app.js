@@ -105,7 +105,8 @@ client.on("message", async message => {
   }
 
   if(command === "clear") {
-
+    if(!message.member.roles.some(r=>["clear"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this! **MAKE SURE YOU HAVE ROLE 'clear'**");
     const deleteCount = parseInt(args[0], 10);
 
     if(!deleteCount || deleteCount < 2 || deleteCount > 100)
